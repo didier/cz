@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Didier Catz — Business Card</title>
-    <link rel="shortcut icon" href="https://didiercatz.com/favicon-96x96.dcf953e8.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://didiercatz.com/favicon-96x96.dcf953e8.png"
+      type="image/x-icon"
+    />
     <style>
       * {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -46,7 +50,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        max-width: 100%
+        max-width: 100%;
       }
 
       dd {
@@ -55,7 +59,7 @@
       }
       dd:hover:after {
         content: '→';
-        margin-left: .35ch;
+        margin-left: 0.35ch;
         position: absolute;
       }
 
@@ -71,30 +75,53 @@
       a:visited:hover {
         text-decoration: underline;
       }
+
+      main {
+        position: relative;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 auto;
+      }
+
+      main img {
+        transition: all 1s ease;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        backface-visibility: hidden;
+        perspective: 400px;
+        border-radius: 4px;
+        box-shadow: 0px 10px 30px -10px darkblue;
+        max-width: calc(100% - 48px);
+        transform: translate(-50%, -50%);
+      }
+
+      main img:last-child {
+        transform: translate(-50%, -50%) rotateY(180deg);
+        z-index: -1;
+        opacity: 0;
+      }
+
+      main:hover img {
+        transform: translate(-50%, -50%) rotateY(180deg);
+        opacity: 0;
+      }
+      main:hover img:last-child {
+        transform: translate(-50%, -50%) rotateY(0);
+        z-index: 1;
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Didier Catz — Digital Designer & Interactive Developer</h1>
-      <h2>Business Card</h2>
-    </header>
     <main>
-      <dl>
-        <dt>Website</dt>
-        <dd><a href="https://didiercatz.com">didiercatz.com</a></dd>
-        
-        <dt>E-mail</dt>
-        <dd><a href="mailto:hello@didiercatz.com">hello<span>@</span>didiercatz.com</a></dd>
-        
-        <dt>GitHub</dt>
-        <dd><a href="https://github.com/didiercatz">@didiercatz</a></dd>
-        
-        <dt>Twitter</dt>
-        <dd><a href="https://twitter.com/didiercatz">@didiercatz</a></dd>
-        
-        <dt>Instagram</dt>
-        <dd><a href="https://instagram.com/didiercatz">@didiercatz</a></dd>
-      </ul>
+      <div class="image-wrapper">
+        <img src="front.svg" alt="" />
+        <img src="back.svg" alt="" />
+      </div>
     </main>
-</body>
+  </body>
 </html>
