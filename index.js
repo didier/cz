@@ -10,13 +10,13 @@ window.addEventListener('load', () => {
     window.location.href = 'https://twitter.com/didiercatz/'
   }
   if (window.location.pathname.includes('/cv')) { 
-    window.location.href = 'https://read.cv/didiercatz/'
+    window.location.href = 'https://read.cv/didier/'
   }
   if (window.location.pathname.includes('/c')) { 
-    window.location.href = 'https://read.cv/didiercatz/'
+    window.location.href = 'https://read.cv/didier/'
   }
   if (window.location.pathname.includes('/resume')) { 
-    window.location.href = 'https://read.cv/didiercatz/'
+    window.location.href = 'https://read.cv/didier/'
   }
   if (window.location.pathname.includes('/d')) { 
     window.location.href = 'https://dribbble.com/didiercatz/'

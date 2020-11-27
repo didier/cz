@@ -133,15 +133,15 @@ window.addEventListener('load', function () {
   }
 
   if (window.location.pathname.includes('/cv')) {
-    window.location.href = 'https://read.cv/didiercatz/';
+    window.location.href = 'https://read.cv/didier/';
   }
 
   if (window.location.pathname.includes('/c')) {
-    window.location.href = 'https://read.cv/didiercatz/';
+    window.location.href = 'https://read.cv/didier/';
   }
 
   if (window.location.pathname.includes('/resume')) {
-    window.location.href = 'https://read.cv/didiercatz/';
+    window.location.href = 'https://read.cv/didier/';
   }
 
   if (window.location.pathname.includes('/d')) {
