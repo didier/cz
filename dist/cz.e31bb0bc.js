@@ -132,8 +132,24 @@ window.addEventListener('load', function () {
     window.location.href = 'https://twitter.com/didiercatz/';
   }
 
+  if (window.location.pathname.includes('/cv')) {
+    window.location.href = 'https://read.cv/didiercatz/';
+  }
+
+  if (window.location.pathname.includes('/c')) {
+    window.location.href = 'https://read.cv/didiercatz/';
+  }
+
+  if (window.location.pathname.includes('/resume')) {
+    window.location.href = 'https://read.cv/didiercatz/';
+  }
+
+  if (window.location.pathname.includes('/d')) {
+    window.location.href = 'https://dribbble.com/didiercatz/';
+  }
+
   if (window.location.pathname.includes('/s')) {
-    window.location.href = 'https://twitter.com/didiercatz/';
+    window.location.href = 'https://didiercatz.com/';
   }
 });
 },{}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
