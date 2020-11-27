@@ -1,7 +1,8 @@
 window.addEventListener('load', () => {
   if (window.location.pathname.includes('/g/')) { 
+    console.log('helo')
     const repo = window.location.pathname.split('/g/')[1]
-    window.location.href = `https://github.com/didiercatz/${repo}`
+    // window.location.href = `https://github.com/didiercatz/${repo}`
   }
   if (window.location.pathname.includes('/i')) { 
     window.location.href = 'https://instagram.com/didiercatz/'

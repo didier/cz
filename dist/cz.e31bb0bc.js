@@ -120,8 +120,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"index.js":[function(require,module,exports) {
 window.addEventListener('load', function () {
   if (window.location.pathname.includes('/g/')) {
-    var repo = window.location.pathname.split('/g/')[1];
-    window.location.href = "https://github.com/didiercatz/".concat(repo);
+    console.log('helo');
+    var repo = window.location.pathname.split('/g/')[1]; // window.location.href = `https://github.com/didiercatz/${repo}`
   }
 
   if (window.location.pathname.includes('/i')) {
