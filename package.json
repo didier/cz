@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/didier/cz/issues"
   },
-  "homepage": "https://github.com/didier/cz#readme"
+  "homepage": "https://github.com/didier/cz#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
