@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/didiercatz/cz.git"
+    "url": "git+https://github.com/didier/cz.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/didiercatz/cz/issues"
+    "url": "https://github.com/didier/cz/issues"
   },
-  "homepage": "https://github.com/didiercatz/cz#readme"
+  "homepage": "https://github.com/didier/cz#readme"
 }
