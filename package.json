@@ -1,0 +1,21 @@
+{
+  "name": "cz",
+  "version": "1.0.0",
+  "description": "My online business card",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didiercatz/cz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didiercatz/cz/issues"
+  },
+  "homepage": "https://github.com/didiercatz/cz#readme"
+}
