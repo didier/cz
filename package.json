@@ -1,7 +1,7 @@
 {
   "name": "cz",
   "version": "1.0.0",
-  "description": "My online business card",
+  "description": "Digital business card",
   "targets": {
     "app": {
       "distDir": "./dist",
