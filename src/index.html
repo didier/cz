@@ -36,98 +36,20 @@
       content="Didier Catz' contact details, in the form of easily shareable short links."
     />
     <meta property="twitter:image" content="/meta.png" />
-    <style>
-      *,
-      :after,
-      :before {
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 500;
-        font-size: 32px;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        --bg: #00f;
-        --bg: #111827;
-        --color: #fff;
-        --gray: #374151;
-      }
-      body {
-        width: 30ch;
-        margin: 0 auto;
-        background: var(--bg);
-        color: var(--color);
-        overflow-x: hidden;
-        padding: 2rem 1rem;
-      }
-      body,
-      footer,
-      main {
-        display: grid;
-        grid-auto-flow: row;
-        grid-gap: 2rem;
-      }
-      img {
-        max-height: 4rem;
-        place-self: end;
-      }
-      h3 {
-        color: var(--gray);
-      }
-      li a {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      li a p:first-child:before {
-        content: 'didier.cz';
-        color: var(--gray);
-      }
-      li a p:last-child {
-        text-align: right;
-      }
-      a,
-      a:visited {
-        text-decoration: none;
-        color: var(--color);
-      }
-      a:hover,
-      a:visited:hover {
-        text-decoration: underline;
-      }
-      main {
-        position: relative;
-        transition: all 0.2s ease;
-        margin: 0 auto;
-      }
-      li,
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-auto-flow: row;
-        grid-gap: 0.5rem;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.scss" />
     <script async data-api="/_hive" src="https://didier.cz/bee.js"></script>
   </head>
   <body>
     <header>
       <div>
         <h1>Didier Catz</h1>
-        <h2>Digital Creator</h2>
+        <h2>Co-Founder, <a href="https://stypt.nl">Stypt</a></h2>
         <h3>Business Card</h3>
       </div>
     </header>
     <main>
       <p>
-        Didier Catz is a creative designer and developer focused on ethical,
+        Didier Catz is a technical designer and developer focused on ethical,
         sustainable and accessible digital experiences. <br />
         <br />
         You can find his contact details below, in the form of easily shareable

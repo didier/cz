@@ -23,7 +23,9 @@
     "url": "https://github.com/didier/cz/issues"
   },
   "homepage": "https://github.com/didier/cz#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-beta.2"
+  },
   "dependencies": {
     "parcel": "^2.0.0-beta.2"
   }
