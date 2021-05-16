@@ -3,7 +3,7 @@
 /_hive/*  https://hive.splitbee.io/:splat  200
 
 /s* https://didiercatz.com 301
-/c* mailto:hello@didiercatz.com 301
+/c* hello@didiercatz.com 301
 
 /g* https://github.com/didier/:splat 301
 /i* https://instagram.com/didiercatz 301
