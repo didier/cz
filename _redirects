@@ -10,3 +10,6 @@
 
 /w* https://didiercatz.com/work/:splat 301
 /b* https://didiercatz.com/blog/:splat 301
+
+/bee.js  https://cdn.splitbee.io/sb.js  200
+/_hive/*  https://hive.splitbee.io/:splat  200
