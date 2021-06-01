@@ -1,8 +1,4 @@
-# Local Netlify folder
-.netlify
-node_modules
-.*cache
-dist
 .DS_Store
-*-lock.json
-*.log
+node_modules
+/.svelte-kit
+/functions
