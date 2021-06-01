@@ -1,9 +1,4 @@
 [build]
+  publish = "/"
   functions = "functions"
-
-[dev]
-  command = "yarn dev" # Command to start your dev server
-  targetPort = 1234 # The port for your application server, framework or site generator
-  framework = "#custom"
-  port = 8888 # The port that the netlify dev will be accessible on
-  publish = "dist" # The path to your static content folder
+  command = "yarn build"
