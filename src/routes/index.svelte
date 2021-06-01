@@ -1,7 +1,6 @@
 <script context="module">
 	import { dev } from '$app/env'
 
-	export const prerender = !dev
 	export const router = dev
 	export const hydrate = dev
 
