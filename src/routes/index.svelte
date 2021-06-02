@@ -58,6 +58,8 @@
 			class="rounded-full object-cover w-24 h-24 border-gray-100 border-2 mb-4"
 			src="/me.jpg"
 			alt="Didier Catz"
+			width="96"
+			height="96"
 		/>
 		<h1>Didier Catz</h1>
 		<h2 class="text-gray-500 dark:text-gray-400">Technical Designer</h2>
