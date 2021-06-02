@@ -53,11 +53,6 @@ export function get({ params }) {
 		case 'r':
 			return redirect(`https://read.cv/didier`)
 
-		case 'bee.js':
-			return redirect(`https://cdn.splitbee.io/sb.js`, 200)
-		case '_hive':
-			return redirect(`https://hive.splitbee.io/${parameters}`, 200)
-
 		default:
 			return redirect(`/`)
 	}
