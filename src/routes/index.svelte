@@ -60,7 +60,7 @@
 			alt="Didier Catz"
 		/>
 		<h1>Didier Catz</h1>
-		<h2 class="text-gray-500">Technical Designer</h2>
+		<h2 class="text-gray-500 dark:text-gray-400">Technical Designer</h2>
 		<h3>Co-Founder, <a href="https://stypt.nl">Stypt</a></h3>
 	</div>
 </header>
@@ -78,7 +78,7 @@
 		{/each}
 	</ul>
 </main>
-<footer class="text-gray-500 flex justify-end">
+<footer class="text-gray-500 dark:text-gray-400 flex justify-end">
 	<p>&copy; Didier Catz, {new Date().getFullYear()}</p>
 	<!-- <img src="/qr.svg" alt="Scan this QR code to share this business card." /> -->
 </footer>

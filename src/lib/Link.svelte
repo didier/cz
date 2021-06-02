@@ -12,7 +12,7 @@
 <style>
 	a > p:first-child::before {
 		content: 'didier.cz';
-		@apply text-gray-500;
+		@apply text-gray-500 dark:text-gray-400;
 	}
 	a:before {
 		@apply block transition-colors ease-out w-full h-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg;
