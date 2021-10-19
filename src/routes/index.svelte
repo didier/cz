@@ -1,5 +1,5 @@
 <script context="module">
-	import { dev } from '$app/env'
+	import { browser, dev } from '$app/env'
 
 	export const router = dev
 	export const hydrate = dev
@@ -30,39 +30,21 @@
 </script>
 
 <script>
-	import { navigating } from '$app/stores'
-	import accordion from '$lib/accordion'
+	// Components
 	import Link from '$lib/Link.svelte'
 	import SvelteSeo from 'svelte-seo'
+
+	// Actions
+	import accordion from '$lib/accordion'
+
+	// Internals
+	import { navigating } from '$app/stores'
 	import { fade } from 'svelte/transition'
 
 	export let links = []
 
 	let open = false
-
 	const toggle = () => (open = !open)
-
-	const share = async (event) => {
-		await navigator.share('https://didier.cz')
-		// const text = 'https://didier.cz'
-		// if (!navigator.clipboard) {
-
-		// 	// Clipboard API not available
-		// 	alert('no clip')
-		// 	return
-		// }
-		// // const text = event.target.innerText
-		// try {
-		// 	await navigator.clipboard.writeText(text)
-		// 	const temp = event.target.textContent
-		// 	event.target.textContent = 'Copied to clipboard!'
-		// 	setTimeout(() => {
-		// 		event.target.textContent = temp
-		// 	}, 750)
-		// } catch (err) {
-		// 	console.error('Failed to share!', err)
-		// }
-	}
 </script>
 
 <SvelteSeo
@@ -125,20 +107,14 @@
 						<p class="text-3xl transform transition" class:rotate-90={open}>&RightArrow;</p>
 					</button>
 					<div use:accordion={open}>
-						<div class="bg-gray-100 dark:bg-gray-800 rounded-lg py-8 mt-4 grid items-center gap-4">
+						<div
+							class="bg-gray-100 dark:bg-gray-800 rounded-lg py-8 mt-4 grid place-items-center gap-4"
+						>
 							<img
 								src="/qr.svg"
 								class="z-50 mx-auto"
 								alt="Scan this QR code to share this business card."
 							/>
-							<button
-								class="bg-white dark:bg-gray-900 mx-auto px-4 py-3 rounded-md 
-							hover:bg-gray-50 dark:hover:bg-gray-700 active:text-white 
-							active:bg-orange dark:active:bg-orange transition"
-								on:click={share}
-							>
-								Share link</button
-							>
 						</div>
 					</div>
 				</div>
