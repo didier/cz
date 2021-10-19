@@ -28,6 +28,7 @@ export function get({ params }) {
 
 		case 'writing':
 			return redirect(`https://didiercatz.com/writing`)
+		case 'w':
 		case 'work':
 			return redirect(`https://didiercatz.com/work`)
 		case 'uses':
