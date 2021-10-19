@@ -1,5 +1,5 @@
 <script context="module">
-	import { browser, dev } from '$app/env'
+	import { dev } from '$app/env'
 
 	export const router = dev
 	export const hydrate = dev
@@ -11,8 +11,6 @@
 	export const load = async () => {
 		const links = [
 			{ href: '/s', title: 'Portfolio' },
-			// { href: '/work', title: 'Work' },
-			// { href: '/writing', title: 'Writing' },
 			{ href: '/cv', title: 'Resumé' },
 			{ href: '/g', title: 'GitHub' },
 			{ href: '/i', title: 'Instagram' },
@@ -80,45 +78,17 @@
 			<h2 class="text-gray-500 dark:text-gray-400">Designer & Engineer</h2>
 			<h3>Co-Founder, <a href="https://stypt.nl">Stypt</a></h3>
 		</div>
-		<!-- <p class="text-gray-500"> -->
-		<!-- Didier Catz is a technical designer and developer with 7+ years of experience creating
-				interactive digital experiences and products. -->
-		<!-- Designing intuitive human interfaces at the intersection of technology and creativity. -->
-		<!-- </p> -->
 	</header>
 	<main
 		transition:fade
 		class="grid gap-4 bg-white dark:bg-gray-900 p-4 py-8 rounded-xl overflow-x-hidden"
 	>
-		<!-- <h1 class="font-medium text-2xl">About Didier</h1> -->
-		<!-- <p class="text-gray-500">
-					You can find his contact details below, in the form of easily shareable shortlinks.
-				</p> -->
 		<ul class="grid gap-4">
 			{#each links as link}
 				<li>
 					<Link {...link} />
 				</li>
 			{/each}
-			<li>
-				<div class="cursor-pointer relative" class:open>
-					<button class="w-full flex justify-between" on:click={toggle}>
-						<p class="text-3xl">Share this page</p>
-						<p class="text-3xl transform transition" class:rotate-90={open}>&RightArrow;</p>
-					</button>
-					<div use:accordion={open}>
-						<div
-							class="bg-gray-100 dark:bg-gray-800 rounded-lg py-8 mt-4 grid place-items-center gap-4"
-						>
-							<img
-								src="/qr.svg"
-								class="z-50 mx-auto"
-								alt="Scan this QR code to share this business card."
-							/>
-						</div>
-					</div>
-				</div>
-			</li>
 		</ul>
 	</main>
 	<footer class="text-gray-500 dark:text-gray-400 flex justify-end p-4">
