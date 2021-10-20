@@ -81,7 +81,7 @@
 	</header>
 	<main
 		transition:fade
-		class="grid gap-4 bg-white dark:bg-gray-900 p-4 py-8 rounded-xl overflow-x-hidden"
+		class="grid gap-4 bg-white dark:bg-gray-900 p-4 py-8 sm:rounded-xl overflow-x-hidden sm:overflow-visible"
 	>
 		<ul class="grid gap-4">
 			{#each links as link}
