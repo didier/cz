@@ -75,7 +75,7 @@
 		/>
 		<div class="text-xl">
 			<h1>Didier Catz</h1>
-			<h2 class="text-gray-500 dark:text-gray-400">Designer & Engineer</h2>
+			<h2 class="text-gray-600 dark:text-gray-400">Designer & Engineer</h2>
 			<h3>Co-Founder, <a href="https://stypt.nl">Stypt</a></h3>
 		</div>
 	</header>
@@ -91,7 +91,7 @@
 			{/each}
 		</ul>
 	</main>
-	<footer class="text-gray-500 dark:text-gray-400 flex justify-end p-4">
+	<footer class="text-gray-600 dark:text-gray-400 flex justify-end p-4">
 		<p>&copy; Didier Catz, {new Date().getFullYear()}</p>
 	</footer>
 {/if}

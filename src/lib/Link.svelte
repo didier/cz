@@ -7,7 +7,7 @@
 <a {href} data-splitbee-event={title} class="link flex justify-between relative z-20">
 	<p class="text-3xl">{title}</p>
 	<div class="flex items-center">
-		<p class="pr-2 text-sm text-gray-400" class:is-mail={isMail}>
+		<p class="pr-2 text-sm text-gray-500" class:is-mail={isMail}>
 			{#if isMail}
 				{href.replace('mailto:', '')}
 			{:else}
