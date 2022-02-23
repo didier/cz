@@ -1,16 +1,16 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-	mode: 'jit',
 	darkMode: 'media', // or 'media' or 'class'
-	purge: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
 			colors: {
-				gray: colors.trueGray,
+				gray: colors.neutral,
 				orange: '#F2994A'
 			}
 		}
 	},
 	plugins: []
 }
+

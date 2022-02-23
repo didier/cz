@@ -58,7 +58,7 @@
 	}}
 	twitter={{
 		title,
-		site: '@didier',
+		site: '@didiercatz',
 		description,
 		image: `${url}/meta.png`
 	}}
