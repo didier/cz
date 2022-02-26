@@ -38,6 +38,7 @@
 	// Internals
 	import { navigating } from '$app/stores'
 	import { fade } from 'svelte/transition'
+	import StandWithUkraine from '$lib/StandWithUkraine.svelte'
 
 	export let links = []
 
@@ -63,6 +64,12 @@
 		image: `${url}/meta.png`
 	}}
 />
+
+<!-- #StandWithUkraine -->
+<StandWithUkraine />
+<div class="mb-8" />
+<!-- / -->
+
 {#if !$navigating}
 	<div class="pt-16 pb-2 border-b border-1 dark:border-gray-700 px-4">Didier Catz</div>
 	<header class="grid gap-8 px-4" transition:fade>
