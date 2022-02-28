@@ -1,40 +1,35 @@
 <script>
 	import { fade } from 'svelte/transition'
-	const hashtags = ['StopWarInUkraine', 'StandWithUkraine']
-		.map((item, index, array) => array)
-		.flat()
-		.map((item, index, array) => array)
-		.flat()
-		.map((item, index, array) => array)
-		.flat()
 </script>
 
 <div
-	class="fixed print:hidden left-0 right-0 top-0 marquee w-[200vw] flex overflow-hidden ring-1 ring-gray-200 dark:ring-900"
+	data-wrapper
+	class="fixed print:hidden -translate-y-full left-0 right-0 top-0 marquee w-full flex overflow-hidden ring-1 ring-gray-200 dark:ring-900 font-medium"
 	in:fade
 >
-	{#each hashtags as hashtag}
-		<a
-			href="https://twitter.com/hashtag/{hashtag}"
-			class="odd:bg-[#0000ff] odd:text-white bg-[#ffff00] px-6 py-4 h-full text-black text-center grid place-items-center"
-		>
-			#{hashtag}
-		</a>
-	{/each}
+	<a
+		href="https://www.stopputin.net/"
+		class="bg-blue-700 transition hover:bg-blue-600 text-white px-6 py-4 h-full  text-center w-full inline"
+	>
+		I <span class="text-yellow-300">#StandWithUkraine</span>. Petition your leaders. Show your
+		support.
+		<span class="transform inline-block ml-1 -rotate-90">
+			<span class="inline-block animate-bounce">&downarrow;</span>
+		</span>
+	</a>
 </div>
 
 <style>
-	.marquee a {
-		animation: marquee 5s linear 0s infinite;
+	[data-wrapper] {
+		animation: move 0.5s var(--ease-out) 1s forwards;
 	}
 
-	@keyframes marquee {
+	@keyframes move {
 		0% {
-			transform: translate3d(0%, 0, 0);
+			transform: translateY(-100%);
 		}
-
 		100% {
-			transform: translate3d(-200%, 0, 0);
+			transform: translateY(0%);
 		}
 	}
 </style>

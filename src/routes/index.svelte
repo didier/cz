@@ -65,43 +65,42 @@
 	}}
 />
 
-<!-- #StandWithUkraine -->
 <StandWithUkraine />
-<div class="mb-8" />
-<!-- / -->
 
-{#if !$navigating}
-	<div class="pt-16 pb-2 border-b border-1 dark:border-gray-700 px-4">Didier Catz</div>
-	<header class="grid gap-8 px-4" transition:fade>
-		<img
-			class="rounded-full object-cover w-24 h-24 border-gray-100 border-2"
-			src="/me.jpg"
-			alt="Didier Catz"
-			width="96"
-			height="96"
-		/>
-		<div class="text-xl">
-			<h1>Didier Catz</h1>
-			<h2 class="text-gray-600 dark:text-gray-400">Designer & Engineer</h2>
-			<h3>Co-Founder, <a href="https://stypt.nl">Stypt</a></h3>
-		</div>
-	</header>
-	<main
-		transition:fade
-		class="grid gap-4 bg-white dark:bg-gray-900 p-4 py-8 sm:rounded-xl overflow-x-hidden sm:overflow-visible"
-	>
-		<ul class="grid gap-4">
-			{#each links as link}
-				<li>
-					<Link {...link} />
-				</li>
-			{/each}
-		</ul>
-	</main>
-	<footer class="text-gray-600 dark:text-gray-400 flex justify-end p-4">
-		<p>&copy; Didier Catz, {new Date().getFullYear()}</p>
-	</footer>
-{/if}
+<div data-wrapper>
+	{#if !$navigating}
+		<div class="pt-16 pb-2 border-b border-1 dark:border-gray-700 px-4">Didier Catz</div>
+		<header class="grid gap-8 px-4 py-8" transition:fade>
+			<img
+				class="rounded-full object-cover w-24 h-24 border-gray-100 border-2"
+				src="/me.jpg"
+				alt="Didier Catz"
+				width="96"
+				height="96"
+			/>
+			<div class="text-xl">
+				<h1>Didier Catz</h1>
+				<h2 class="text-gray-600 dark:text-gray-400">Designer & Engineer</h2>
+				<h3>Co-Founder, <a href="https://stypt.nl">Stypt</a></h3>
+			</div>
+		</header>
+		<main
+			transition:fade
+			class="grid gap-4 bg-white dark:bg-gray-900 p-4 py-8 sm:rounded-xl overflow-x-hidden sm:overflow-visible"
+		>
+			<ul class="grid gap-4">
+				{#each links as link}
+					<li>
+						<Link {...link} />
+					</li>
+				{/each}
+			</ul>
+		</main>
+		<footer class="text-gray-600 dark:text-gray-400 flex justify-end p-4">
+			<p>&copy; Didier Catz, {new Date().getFullYear()}</p>
+		</footer>
+	{/if}
+</div>
 
 <style>
 	/* .open:before {
@@ -112,4 +111,17 @@
 		z-index: 0;
 		transform: translate(-50%, -50%);
 	} */
+
+	[data-wrapper] {
+		animation: move 0.5s var(--ease-out) 1s forwards;
+	}
+
+	@keyframes move {
+		0% {
+			transform: translateY(0%);
+		}
+		100% {
+			transform: translateY(56px);
+		}
+	}
 </style>
