@@ -1,26 +1,25 @@
 <script>
 	export let href, title
 
-	let isMail = href.includes('mailto')
+	let isModule = href.length > 5
 </script>
 
 <a {href} data-splitbee-event={title} class="link flex justify-between relative z-20">
 	<p class="text-3xl">{title}</p>
 	<div class="flex items-center">
-		<p class="pr-2 text-sm text-gray-500" class:is-mail={isMail}>
-			{#if isMail}
+		<p class="pr-1 text-sm text-gray-500" class:is-module={isModule}>
+			{#if isModule}
 				{href.replace('mailto:', '')}
 			{:else}
 				didier.cz{href}
 			{/if}
 		</p>
-		<p class="text-3xl">&RightArrow;</p>
 	</div>
 </a>
 
 <style lang="postcss">
 	.link:before {
-		@apply block transition ease-out w-full h-full absolute left-1/2 top-1/2 rounded-lg;
+		@apply block transition ease-out w-full h-full absolute left-1/2 top-1/2 rounded-xl;
 		width: calc(100% + 3rem);
 		height: calc(100% + 1rem);
 		content: '';
@@ -29,7 +28,7 @@
 	}
 
 	.link:after {
-		@apply block absolute border-4 border-transparent left-1/2 top-1/2 rounded-lg transition ease-out;
+		@apply block absolute border-4 border-transparent left-1/2 top-1/2 rounded-xl transition ease-out;
 		width: calc(100% + 3rem);
 		height: calc(100% + 1rem);
 		content: '';

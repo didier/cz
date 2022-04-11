@@ -4,7 +4,7 @@
 
 <div
 	data-wrapper
-	class="fixed print:hidden -translate-y-full left-0 right-0 top-0 marquee w-full flex overflow-hidden ring-1 ring-gray-200 dark:ring-900 font-medium"
+	class="fixed print:hidden translate-y-full left-0 right-0 bottom-0 marquee w-full flex overflow-hidden ring-1 ring-gray-200 dark:ring-900 font-medium"
 	in:fade
 >
 	<a
@@ -26,7 +26,7 @@
 
 	@keyframes move {
 		0% {
-			transform: translateY(-100%);
+			transform: translateY(100%);
 		}
 		100% {
 			transform: translateY(0%);

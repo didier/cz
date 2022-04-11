@@ -53,6 +53,8 @@ export function get({ params }) {
 		case 'resume':
 		case 'r':
 			return redirect(`https://read.cv/didier`)
+		case 'f':
+			return redirect(`https://foundation.app/@didier`)
 
 		default:
 			return redirect(`/`)
