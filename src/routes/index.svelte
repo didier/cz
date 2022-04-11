@@ -74,7 +74,7 @@
 			<div class="text-xl">
 				<h1>Didier Catz</h1>
 				<h2 class="text-gray-600 dark:text-gray-400">People-centered creative technologist</h2>
-				<h4 class="text-gray-600 dark:text-gray-400 mt-2">didiercatz.eth</h4>
+				<h3 class="text-gray-600 dark:text-gray-400 mt-2">didiercatz.eth</h3>
 			</div>
 		</header>
 		<main transition:fade class="grid gap-4 dark:bg-gray-900 sm:rounded-2xl">
