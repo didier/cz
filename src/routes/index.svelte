@@ -77,7 +77,7 @@
 				<h3 class="text-gray-600 dark:text-gray-400 mt-2">didiercatz.eth</h3>
 			</div>
 		</header>
-		<main transition:fade class="grid gap-4 dark:bg-gray-900 sm:rounded-2xl">
+		<main transition:fade class="grid gap-4 sm:rounded-2xl">
 			<ul class="grid gap-2 sm:gap-4 sm:grid-cols-2">
 				{#each links as link, index}
 					<li class="link" style:--delay="{index * 75}ms">

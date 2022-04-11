@@ -5,7 +5,7 @@
 <a
 	{href}
 	data-splitbee-event={title}
-	class="link grid grid-cols-2 sm:grid-cols-1 sm:content-between relative z-20 bg-white rounded-xl shadow-xl shadow-gray-400/10 p-4 sm:h-32 group"
+	class="link grid grid-cols-2 sm:grid-cols-1 sm:content-between relative z-20 bg-white dark:bg-gray-700/50 dark:ring-0 dark:ring-gray-700 rounded-xl shadow-xl shadow-gray-400/10 dark:shadow-gray-900/10 p-4 sm:h-32 group"
 >
 	<div class="flex items-center justify-end sm:justify-start overflow-hidden">
 		<p class="pr-1 text-sm text-gray-500 text-right sm:text-left">
@@ -52,12 +52,12 @@
 		}
 
 		&:after {
-			@apply border-indigo-500;
+			@apply border-indigo-500 dark:border-indigo-800;
 			opacity: 0.5;
 			animation: pulse 0.75s infinite ease-out;
 		}
 		&:before {
-			@apply bg-indigo-500;
+			@apply bg-indigo-500 dark:bg-indigo-800;
 			transform: translate(-50%, -50%) scale(1);
 		}
 	}
@@ -70,6 +70,12 @@
 		to {
 			transform: translate(-50%, -50%) scaleY(1.1) scaleX(1.06);
 			opacity: 0;
+		}
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		a {
+			box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 5%);
 		}
 	}
 </style>
