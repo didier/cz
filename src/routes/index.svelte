@@ -8,23 +8,15 @@
 	const description = "Didier Catz' contact details, in the form of easily shareable short links."
 	const url = dev ? 'http://localhost:3000' : 'https://didier.cz/'
 
-	export const load = async () => {
-		const links = [
-			{ href: '/s', title: 'Portfolio' },
-			{ href: '/cv', title: 'Resumé' },
-			{ href: '/g', title: 'GitHub' },
-			{ href: '/i', title: 'Instagram' },
-			{ href: '/l', title: 'LinkedIn' },
-			{ href: '/t', title: 'Twitter' },
-			{ href: 'mailto:hello@didiercatz.com', title: 'Contact' }
-		]
-
-		return {
-			props: {
-				links
-			}
-		}
-	}
+	const links = [
+		{ href: '/s', title: 'Portfolio', name: 'didiercatz.com' },
+		{ href: '/cv', title: 'Resumé', name: 'read.cv/didier' },
+		{ href: '/g', title: 'GitHub', name: '@didier' },
+		{ href: '/i', title: 'Instagram', name: '@didiercatz' },
+		{ href: '/l', title: 'LinkedIn', name: '@didiercatz' },
+		{ href: '/t', title: 'Twitter', name: '@didiercatz' },
+		{ href: 'mailto:hello@didiercatz.com', title: 'Contact', name: 'hello@didiercatz.com' }
+	]
 </script>
 
 <script>
@@ -39,8 +31,6 @@
 	import { navigating } from '$app/stores'
 	import { fade } from 'svelte/transition'
 	import StandWithUkraine from '$lib/StandWithUkraine.svelte'
-
-	export let links = []
 
 	let open = false
 	const toggle = () => (open = !open)
@@ -67,10 +57,13 @@
 
 <StandWithUkraine />
 
-<div data-wrapper class="min-h-screen">
+<div data-wrapper class="p-4">
 	{#if !$navigating}
 		<!-- <div class="pt-16 pb-1 border-b border-1 dark:border-gray-700 px-4">Didier Catz</div> -->
-		<header class="grid gap-8 px-4 py-16 grid-cols-[auto_1fr] items-center my-auto" transition:fade>
+		<header
+			class="grid gap-8 py-16 sm:pt-24 grid-cols-[auto_1fr] items-center my-auto"
+			transition:fade
+		>
 			<img
 				class="rounded-full object-cover w-24 h-24 border-gray-100 border-2"
 				src="/me.jpg"
@@ -81,34 +74,39 @@
 			<div class="text-xl">
 				<h1>Didier Catz</h1>
 				<h2 class="text-gray-600 dark:text-gray-400">People-centered creative technologist</h2>
-				<h4 class="text-gray-600 mt-2">didiercatz.eth</h4>
+				<h4 class="text-gray-600 dark:text-gray-400 mt-2">didiercatz.eth</h4>
 			</div>
 		</header>
-		<main
-			transition:fade
-			class="grid gap-4 bg-white dark:bg-gray-900 p-4 py-8 sm:rounded-2xl overflow-x-hidden sm:overflow-visible shadow-xl shadow-gray-400/10"
-		>
-			<ul class="grid gap-4">
-				{#each links as link}
-					<li>
+		<main transition:fade class="grid gap-4 dark:bg-gray-900 sm:rounded-2xl">
+			<ul class="grid gap-2 sm:gap-4 sm:grid-cols-2">
+				{#each links as link, index}
+					<li class="link" style:--delay="{index * 75}ms">
 						<Link {...link} />
 					</li>
 				{/each}
 			</ul>
 		</main>
-		<!-- <footer class="text-gray-600 dark:text-gray-400 flex justify-end p-4">
-			<p>&copy; Didier Catz, {new Date().getFullYear()}</p>
-		</footer> -->
 	{/if}
 </div>
 
-<style>
-	/* .open:before {
-		@apply block transition ease-out w-full h-full absolute left-1/2 top-1/2 rounded-lg bg-orange;
-		width: calc(100% + 3rem);
-		height: calc(100% + 1rem);
-		content: '';
-		z-index: 0;
-		transform: translate(-50%, -50%);
-	} */
+<style lang="postcss">
+	.link {
+		animation: enter 0.3s var(--ease-out) forwards;
+
+		animation-delay: var(--delay);
+		opacity: 0;
+		@apply origin-top sm:origin-top-left;
+	}
+
+	@keyframes enter {
+		from {
+			opacity: 0;
+			transform: scale(0.85);
+		}
+
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
 </style>
