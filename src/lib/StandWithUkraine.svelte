@@ -4,7 +4,7 @@
 
 <div
 	data-wrapper
-	class="fixed print:hidden translate-y-full left-0 right-0 bottom-0 marquee w-full flex overflow-hidden ring-1 ring-gray-200 dark:ring-900 font-medium"
+	class="fixed print:hidden translate-y-full left-0 right-0 bottom-0 marquee w-full overflow-hidden ring-1 ring-gray-200 dark:ring-blue-700 font-medium hidden md:flex"
 	in:fade
 >
 	<a

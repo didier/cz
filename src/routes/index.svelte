@@ -4,8 +4,9 @@
 	export const router = dev
 	export const hydrate = dev
 
-	const title = "Didier Catz' Business Card ⇴ didier.cz"
-	const description = "Didier Catz' contact details, in the form of easily shareable short links."
+	const title = 'Didier Catz — Business Card'
+	const description =
+		'The contact details of Didier Catz, in the form of easily shareable short links.'
 	const url = dev ? 'http://localhost:3000' : 'https://didier.cz/'
 
 	const links = [
@@ -65,7 +66,7 @@
 			transition:fade
 		>
 			<img
-				class="rounded-full object-cover w-24 h-24 border-gray-100 border-2"
+				class="rounded-full object-fill w-24 h-24 border-gray-100 border-2"
 				src="/me.jpg"
 				alt="Didier Catz"
 				width="96"
@@ -73,8 +74,13 @@
 			/>
 			<div class="text-xl">
 				<h1>Didier Catz</h1>
-				<h2 class="text-gray-600 dark:text-gray-400">People-centered creative technologist</h2>
-				<h3 class="text-gray-600 dark:text-gray-400 mt-2">didiercatz.eth</h3>
+				<h2 class="text-gray-600 dark:text-gray-400">Experience(d) Designer & Developer</h2>
+
+				<a
+					href="mailto:hello@didiercatz.com"
+					class="text-gray-900 dark:text-white mt-2 block underline decoration-transparent hover:decoration-gray-400 transition"
+					>hello@didiercatz.com</a
+				>
 			</div>
 		</header>
 		<main transition:fade class="grid gap-4 sm:rounded-2xl">
