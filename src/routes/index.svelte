@@ -5,8 +5,7 @@
 	export const hydrate = dev
 
 	const title = 'Didier Catz — Business Card'
-	const description =
-		'The contact details of Didier Catz, in the form of easily shareable short links.'
+	const description = 'My contact details, in the form of easily shareable short links.'
 	const url = dev ? 'http://localhost:3000' : 'https://didier.cz/'
 
 	const links = [
@@ -74,7 +73,7 @@
 			/>
 			<div class="text-xl">
 				<h1>Didier Catz</h1>
-				<h2 class="text-gray-600 dark:text-gray-400">Experience(d) Designer & Developer</h2>
+				<h2 class="text-gray-600 dark:text-gray-400">Designer & Developer</h2>
 
 				<a
 					href="mailto:hello@didiercatz.com"
