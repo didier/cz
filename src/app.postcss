@@ -1,8 +1,14 @@
 @import url('https://rsms.me/inter/inter.css');
+:root {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
+}
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
+	}
+}
 
 html {
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
-
 	--ease: var(--quart);
 	--ease-in: var(--quart-in);
 	--ease-out: var(--quart-out);
@@ -10,6 +16,8 @@ html {
 	--quart: cubic-bezier(0.77, 0, 0.18, 1);
 	--quart-in: cubic-bezier(0.9, 0.03, 0.69, 0.22);
 	--quart-out: cubic-bezier(0.17, 0.84, 0.44, 1);
+
+	@apply tracking-tight;
 }
 
 @tailwind base;

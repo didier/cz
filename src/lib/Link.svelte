@@ -1,11 +1,27 @@
 <script>
-	export let href, title, name
+	import { browser } from '$app/env'
+
+	export let href = null,
+		title,
+		name,
+		isSharingSupported = false
+
+	async function share() {
+		if (browser && document && navigator) {
+			await navigator.share({
+				title: document.querySelector('title').textContent,
+				url: document.querySelector('link[rel="canonical"]').getAttribute('href')
+			})
+		}
+	}
 </script>
 
-<a
+<svelte:element
+	this={isSharingSupported ? 'button' : 'a'}
+	on:click={isSharingSupported && share}
 	{href}
 	data-splitbee-event={title}
-	class="link grid grid-cols-2 sm:grid-cols-1 sm:content-between relative z-20 bg-white dark:bg-gray-700/50 dark:ring-0 dark:ring-gray-700 rounded-xl shadow-xl shadow-gray-400/10 dark:shadow-gray-900/10 p-4 sm:h-32 group"
+	class="w-full text-left items-center h-full link grid grid-cols-2 sm:grid-cols-1 sm:content-between relative z-20 bg-white dark:bg-gray-700/50 dark:ring-0 dark:ring-gray-700 rounded-xl shadow-xl shadow-gray-400/10 dark:shadow-gray-900/10 p-4 sm:h-32 group"
 >
 	<div class="flex items-center justify-end sm:justify-start overflow-hidden">
 		<p class="pr-1 text-sm text-gray-500 text-right sm:text-left">
@@ -17,7 +33,7 @@
 	>
 		{title}
 	</p>
-</a>
+</svelte:element>
 
 <style lang="postcss">
 	.link:before {
