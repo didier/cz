@@ -2,6 +2,7 @@
 	import { dev } from '$app/env'
 
 	export const router = dev
+	export const prerender = !dev
 
 	const title = 'Didier Catz — Business Card'
 	const description = 'My contact details, in the form of easily shareable short links.'
@@ -47,6 +48,21 @@
 	})
 
 	export let title, description, url
+
+	/**
+	 * @type {HTMLDetailsElement}
+	 */
+	let details
+
+	onMount(() => {
+		details.addEventListener('toggle', (e) => {
+			if (e.target.open) {
+				window.scrollTo(0, details.offsetTop)
+			} else {
+				window.scrollTo(0, 0)
+			}
+		})
+	})
 </script>
 
 <SvelteSeo
@@ -93,19 +109,20 @@
 		<main transition:fade class="grid gap-2 sm:rounded-2xl relative">
 			<ul class="grid gap-2 sm:gap-4 sm:grid-cols-2">
 				{#each links as link, index}
-					<li class="link" style:--delay="{index * 75}ms">
+					<li style:--delay="{index * 75}ms">
 						<Link {...link} />
 					</li>
 				{/each}
 				{#if isSharingSupported}
-					<li class="link" style:--delay="{links.length * 75}ms">
+					<li style:--delay="{links.length * 75}ms">
 						<Link {isSharingSupported} title="Share" name="Open Share Sheet" />
 					</li>
 				{/if}
 			</ul>
 			<details
 				style:--delay="{(links.length + 1) * 75}ms"
-				class="link w-full max-w-full relative open:bg-white dark:open:bg-gray-700/50 dark:ring-0 dark:ring-gray-700 rounded-xl p-4 shadow-none transition group"
+				class="border-t-transparent open:link w-full max-w-full relative open:bg-white dark:open:bg-gray-700/50  dark:ring-gray-700 rounded-xl p-4 transition-all group sm:my-2 mb-4 open:shadow-xl open:shadow-gray-400/10 dark:open:shadow-gray-900/10"
+				bind:this={details}
 			>
 				<summary
 					class="text-xl grid grid-flow-col justify-between items-center gap-2 cursor-pointer group-hover:font-medium transition-all"

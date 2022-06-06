@@ -30,9 +30,16 @@ html {
 	*:before {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		scroll-behavior: smooth;
 	}
 
 	html {
 		font-size: 100%;
+	}
+}
+
+@layer utilities {
+	.link {
+		@apply border-t-gray-700 dark:border-t;
 	}
 }
