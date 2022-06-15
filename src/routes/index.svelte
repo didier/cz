@@ -14,7 +14,7 @@
 		{ href: '/i', title: 'Instagram', name: '@didiercatz' },
 		{ href: '/l', title: 'LinkedIn', name: '@didiercatz' },
 		{ href: '/t', title: 'Twitter', name: '@didiercatz' },
-		{ href: 'mailto:hello@didiercatz.com', title: 'Contact', name: 'hello@didiercatz.com' }
+		{ href: 'mailto:didier@catz.me', title: 'Contact', name: 'didier@catz.me' }
 	]
 
 	export const load = async ({ url }) => {
@@ -97,17 +97,17 @@
 			/>
 			<div class="text-xl">
 				<h1>Didier Catz</h1>
-				<h2 class="text-gray-600 dark:text-gray-400">Design Engineer</h2>
+				<h2 class="text-gray-600 dark:text-gray-400">Designer and Developer</h2>
 
 				<a
-					href="mailto:hello@didiercatz.com"
+					href="mailto:didier@catz.me"
 					class="text-gray-900 dark:text-white mt-2 block underline decoration-transparent hover:decoration-gray-400 transition"
-					>hello@didiercatz.com</a
+					>didier@catz.me</a
 				>
 			</div>
 		</header>
 		<main transition:fade class="grid gap-2 sm:rounded-2xl relative">
-			<ul class="grid gap-2 sm:gap-4 sm:grid-cols-2">
+			<ul class="grid gap-2 sm:grid-cols-2">
 				{#each links as link, index}
 					<li style:--delay="{index * 75}ms">
 						<Link {...link} />
@@ -121,7 +121,7 @@
 			</ul>
 			<details
 				style:--delay="{(links.length + 1) * 75}ms"
-				class="border-t-transparent open:link w-full max-w-full relative open:bg-white dark:open:bg-gray-700/50  dark:ring-gray-700 rounded-xl p-4 transition-all group sm:my-2 mb-4 open:shadow-xl open:shadow-gray-400/10 dark:open:shadow-gray-900/10"
+				class="border-t-transparent open:link w-full max-w-full relative open:bg-white dark:open:bg-gray-700/50  dark:ring-gray-700 rounded-xl p-4 transition-all group mb-4 open:shadow-xl open:shadow-gray-400/10 dark:open:shadow-gray-900/10"
 				bind:this={details}
 			>
 				<summary
