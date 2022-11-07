@@ -1,34 +1,3 @@
-<script context="module">
-	import { dev } from '$app/env'
-
-	export const router = dev
-	export const prerender = !dev
-
-	const title = 'Didier Catz — Business Card'
-	const description = 'My contact details, in the form of easily shareable short links.'
-
-	const links = [
-		{ href: '/s', title: 'Portfolio', name: 'didiercatz.com' },
-		{ href: '/cv', title: 'Resumé', name: 'read.cv/didier' },
-		{ href: '/g', title: 'GitHub', name: '@didier' },
-		{ href: '/i', title: 'Instagram', name: '@didiercatz' },
-		{ href: '/l', title: 'LinkedIn', name: '@didiercatz' },
-		{ href: '/t', title: 'Twitter', name: '@didiercatz' },
-		{ href: 'mailto:didier@catz.me', title: 'Contact', name: 'didier@catz.me' }
-	]
-
-	export const load = async ({ url }) => {
-		return {
-			props: {
-				title,
-				description,
-				url: url.origin,
-				links
-			}
-		}
-	}
-</script>
-
 <script>
 	// Components
 	import Link from '$lib/Link.svelte'
@@ -39,6 +8,10 @@
 	import { fade } from 'svelte/transition'
 	import { onMount } from 'svelte'
 
+	/** @type {import('./$types').PageData} */
+	export let data
+	$: ({ title, links, description, image, url } = data)
+
 	let isSharingSupported = false
 
 	onMount(() => {
@@ -46,8 +19,6 @@
 			isSharingSupported = navigator.canShare
 		}
 	})
-
-	export let title, description, url
 
 	/**
 	 * @type {HTMLDetailsElement}
@@ -97,7 +68,7 @@
 			/>
 			<div class="text-xl">
 				<h1>Didier Catz</h1>
-				<h2 class="text-gray-600 dark:text-gray-400">Designer and Developer</h2>
+				<h2 class="text-gray-600 dark:text-gray-400">✳︎ Designer & Code Artisan</h2>
 
 				<a
 					href="mailto:didier@catz.me"
@@ -119,7 +90,7 @@
 					</li>
 				{/if}
 			</ul>
-			<details
+			<!-- <details
 				style:--delay="{(links.length + 1) * 75}ms"
 				class="border-t-transparent open:link w-full max-w-full relative open:bg-white dark:open:bg-gray-700/50  dark:ring-gray-700 rounded-xl p-4 transition-all group mb-4 open:shadow-xl open:shadow-gray-400/10 dark:open:shadow-gray-900/10"
 				bind:this={details}
@@ -146,7 +117,7 @@
 					effectively to optimise product development and innovation.
 					<cite class="block mt-4"><span aria-hidden="true">— </span>Natalya Shelburne</cite>
 				</blockquote>
-			</details>
+			</details> -->
 		</main>
 	{/if}
 </div>

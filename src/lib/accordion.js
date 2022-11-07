@@ -1,4 +1,4 @@
-const accordion = (node, isOpen) => {
+export const accordion = (node, isOpen) => {
 	let initialHeight = node.offsetHeight
 	node.style.height = isOpen ? 'auto' : 0
 	node.style.overflow = 'hidden'
@@ -41,4 +41,4 @@ const accordion = (node, isOpen) => {
 	}
 }
 
-export default accordion
+
