@@ -61,7 +61,7 @@
 		<header class="grid gap-8 py-12 sm:pt-24 grid-cols-[auto_1fr] items-center" transition:fade>
 			<img
 				class="rounded-full object-fill w-24 h-24 border-gray-100 border-2"
-				src="/me.jpg"
+				src="/logo.png"
 				alt="Didier Catz"
 				width="96"
 				height="96"

@@ -7,12 +7,12 @@ const title = 'Didier Catz — Business Card'
 const description = 'My contact details, in the form of easily shareable short links.'
 
 const links = [
-	{ href: '/s', title: 'Portfolio', name: 'didiercatz.com' },
+	{ href: '/website', title: 'Portfolio', name: 'didiercatz.com', displayName: 'website' },
 	{ href: '/cv', title: 'Resumé', name: 'read.cv/didier' },
-	{ href: '/g', title: 'GitHub', name: '@didier' },
-	{ href: '/i', title: 'Instagram', name: '@didiercatz' },
-	{ href: '/l', title: 'LinkedIn', name: '@didiercatz' },
-	{ href: '/t', title: 'Twitter', name: '@didiercatz' },
+	{ href: '/github', title: 'GitHub', name: '@didier' },
+	{ href: '/instagram', title: 'Instagram', name: '@didiercatz' },
+	{ href: '/linkedin', title: 'LinkedIn', name: '@didiercatz' },
+	{ href: '/twitter', title: 'Twitter', name: '@didiercatz' },
 	{ href: 'mailto:didier@catz.me', title: 'Contact', name: 'didier@catz.me' }
 ]
 

@@ -1,5 +1,6 @@
 <script>
 	import { browser } from '$app/environment'
+	import { page } from '$app/stores'
 
 	export let href = null,
 		title,
@@ -25,14 +26,33 @@
 >
 	<div class="flex items-center justify-end sm:justify-start overflow-hidden">
 		<p class="pr-1 text-sm text-gray-500 text-right sm:text-left">
-			{name} &RightArrow;
+			{#if !href.includes('mailto')}
+				<!-- content here -->
+				<span class="group inline-grid items-center grid-cols-1 grid-rows-1 overflow-hidden">
+					<span
+						class="transition duration-300 ease-in-out col-start-1 row-start-1 col-span-1 row-span-1 -translate-y-full group-hover:translate-y-0 inline-block"
+						>{name}
+						&RightArrow;</span
+					>
+					<span
+						class="transition duration-300 ease-in-out col-start-1 row-start-1 col-span-1 row-span-1 translate-y-0 group-hover:translate-y-full"
+						>{$page.url.host}{href}
+						&RightArrow;</span
+					>
+				</span>
+			{:else}
+				<span class="transition col-start-1 row-start-1 col-span-1 row-span-1"
+					>{name}
+					&RightArrow;</span
+				>
+			{/if}
 		</p>
 	</div>
-	<p
+	<h2
 		class="text-3xl leading-none col-start-1 row-span-full sm:row-start-2 sm:row-span-auto sm:col-start-auto"
 	>
 		{title}
-	</p>
+	</h2>
 </svelte:element>
 
 <style lang="postcss">
