@@ -36,7 +36,7 @@
 					>
 					<span
 						class="transition duration-300 ease-in-out col-start-1 row-start-1 col-span-1 row-span-1 translate-y-0 group-hover:translate-y-full"
-						>{$page.url.host}{href}
+						>catz.me{href}
 						&RightArrow;</span
 					>
 				</span>
