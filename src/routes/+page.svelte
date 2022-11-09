@@ -10,7 +10,9 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data
-	$: ({ title, links, description, image, url } = data)
+	$: ({ title, links, description, image } = data)
+
+	const url = 'https://catz.me'
 
 	let isSharingSupported = false
 
