@@ -1,0 +1,130 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-neutral: initial;
+	--color-slate-*: initial;
+	--color-zinc-*: initial;
+	--color-stone-*: initial;
+
+	--color-gray-50: oklch(0.985 0 0);
+	--color-gray-100: oklch(0.97 0 0);
+	--color-gray-150: oklch(0.945 0 0);
+	--color-gray-200: oklch(0.922 0 0);
+	--color-gray-300: oklch(0.87 0 0);
+	--color-gray-400: oklch(0.708 0 0);
+	--color-gray-500: oklch(0.556 0 0);
+	--color-gray-600: oklch(0.439 0 0);
+	--color-gray-700: oklch(0.371 0 0);
+	--color-gray-800: oklch(0.269 0 0);
+	--color-gray-900: oklch(0.205 0 0);
+	--color-gray-950: oklch(0.145 0 0);
+
+	--color-olive-50: oklch(0.975 0.02 110);
+	--color-olive-100: oklch(0.95 0.035 110);
+	--color-olive-200: oklch(0.9 0.05 110);
+	--color-olive-300: oklch(0.82 0.07 110);
+	--color-olive-400: oklch(0.72 0.09 110);
+	--color-olive-500: oklch(0.6 0.1 110);
+	--color-olive-600: oklch(0.5 0.09 110);
+	--color-olive-700: oklch(0.4 0.08 110);
+	--color-olive-800: oklch(0.3 0.06 110);
+	--color-olive-900: oklch(0.22 0.05 110);
+	--color-olive-950: oklch(0.15 0.04 110);
+
+	--color-pigment-blue: color(display-p3 0.808929 0.830474 0.852305);
+	--color-pigment-purple: color(display-p3 0.823385 0.804711 0.8508);
+	--color-pigment-pink: color(display-p3 0.823385 0.804711 0.8508);
+	--color-pigment-stone: color(display-p3 0.928769 0.925614 0.925469);
+	--color-pigment-clay: color(display-p3 0.852877 0.843525 0.80767);
+
+	--font-mono: 'Berkeley Mono', ui-monospace, monospace;
+
+	--rhythm: 1.5rem;
+
+	--hairline: 1px;
+
+	/* Line heights snap to whole rhythm rows (1 row = 24px) */
+	--text-xs--line-height: var(--rhythm);
+	--text-sm--line-height: var(--rhythm);
+	--text-base--line-height: var(--rhythm);
+	--text-lg--line-height: var(--rhythm);
+	--text-xl--line-height: var(--rhythm);
+	--text-2xl--line-height: calc(var(--rhythm) * 1.5);
+	--text-3xl--line-height: calc(var(--rhythm) * 2);
+	--text-4xl--line-height: calc(var(--rhythm) * 2);
+	--text-5xl--line-height: calc(var(--rhythm) * 2);
+}
+
+@theme inline {
+	--color-primary: light-dark(var(--color-gray-950), var(--color-gray-100));
+	--color-secondary: light-dark(var(--color-gray-800), var(--color-gray-200));
+	--color-tertiary: light-dark(var(--color-gray-700), var(--color-gray-400));
+	--color-quaternary: light-dark(var(--color-gray-500), var(--color-gray-500));
+	--color-border: light-dark(var(--color-gray-300), var(--color-gray-800));
+
+	--color-bg: light-dark(var(--color-gray-100), var(--color-gray-950));
+	--color-bg-secondary: light-dark(var(--color-gray-200), var(--color-gray-700));
+	--color-panel: light-dark(var(--color-white), var(--color-gray-800));
+}
+
+/* Hairline borders. Retina splits the pixel, everything else keeps 1px. */
+@media (min-resolution: 2dppx) {
+	:root {
+		--hairline: 0.5px;
+	}
+}
+
+@utility border-hairline {
+	border-width: var(--hairline);
+}
+@utility divide-y-hairline {
+	:where(& > :not(:last-child)) {
+		border-bottom-style: solid;
+		border-bottom-width: var(--hairline);
+	}
+}
+
+/* Vertical rhythm — any multiple of --rhythm (1 row = 24px). e.g. mt-r-3, gap-r-1, h-r-5, mt-r-0.5 */
+@utility mt-r-* {
+	margin-top: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility mb-r-* {
+	margin-bottom: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility my-r-* {
+	margin-block: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility gap-r-* {
+	gap: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility gap-x-r-* {
+	column-gap: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility gap-y-r-* {
+	row-gap: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility h-r-* {
+	height: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility min-h-r-* {
+	min-height: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility size-r-* {
+	width: calc(var(--rhythm) * --value(number, [*]));
+	height: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility leading-r-* {
+	line-height: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility p-r-* {
+	padding: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility pt-r-* {
+	padding-top: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility pb-r-* {
+	padding-bottom: calc(var(--rhythm) * --value(number, [*]));
+}
+@utility py-r-* {
+	padding-block: calc(var(--rhythm) * --value(number, [*]));
+}

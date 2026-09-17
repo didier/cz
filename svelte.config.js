@@ -1,15 +1,10 @@
-import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-netlify'
+import adapter from '@sveltejs/adapter-cloudflare'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		output: { bundleStrategy: 'inline' }
 	}
 }
 

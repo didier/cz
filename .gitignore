@@ -1,8 +1,9 @@
 .DS_Store
 node_modules
 /.svelte-kit
-/functions
 /build
-# Local Netlify folder
-.netlify
-.config
+/.wrangler
+worker-configuration.d.ts
+.env
+.env.*
+!.env.example

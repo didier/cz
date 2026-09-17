@@ -1,20 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="font-mono leading-normal scheme-light-dark">
 	<head>
 		<meta charset="utf-8" />
-		<link
-			href="https://didiercatz.com/favicon-32x32.png"
-			rel="icon"
-			sizes="32x32"
-			type="image/png"
-		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico?v=2" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="%sveltekit.assets%/apple-touch-icon.png?v=2"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="%sveltekit.assets%/favicon-32x32.png?v=2"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="%sveltekit.assets%/favicon-16x16.png?v=2"
+		/>
+		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest?v=2" />
+		<link rel="mask-icon" href="%sveltekit.assets%/safari-pinned-tab.svg?v=2" color="#E5E5E5" />
+		<link rel="shortcut icon" href="%sveltekit.assets%/favicon.ico?v=2" />
+
+		<meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#171717" media="(prefers-color-scheme: dark)" />
 		%sveltekit.head%
 
-		<link rel="preconnect" href="https://rsms.me" />
+		<link rel="preload" href="%sveltekit.assets%/fonts/berkeley-mono.css" as="style" />
+		<link rel="stylesheet" href="%sveltekit.assets%/fonts/berkeley-mono.css" />
 		<!-- <script async data-api="/_hive" src="/bee.js"></script> -->
 	</head>
-	<body class="bg-gray-100 dark:bg-gray-900 dark:text-white overflow-x-hidden antialiased">
+	<body class="overflow-x-hidden bg-bg text-primary antialiased">
 		%sveltekit.body%
 	</body>
 </html>
