@@ -13,9 +13,8 @@ const shortLinks: Record<string, Target> = {
 	writing: 'https://didiercatz.com/writing',
 	uses: 'https://didiercatz.com/uses',
 	about: 'https://didiercatz.com#about',
-	'r cv resume': 'https://read.cv/didier',
-	'c mail email contact': 'mailto:info@didiercatz.com',
-	f: 'https://foundation.app/@didier'
+	// 'r cv resume': 'https://read.cv/didier',
+	'c mail email contact': 'mailto:info@didiercatz.com'
 }
 
 const targets = new Map<string, Target>(
