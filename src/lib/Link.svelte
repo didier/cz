@@ -1,5 +1,13 @@
 <script lang="ts">
-	let { href, title, name }: { href: string; title: string; name: string } = $props()
+	let {
+		href,
+		title,
+		name
+	}: {
+		href: string
+		title: string
+		name: string
+	} = $props()
 </script>
 
 <a {href} class="group flex h-r-2 items-center justify-between text-tertiary hover:text-primary">
